@@ -1,9 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36327.8 d17.14
+VisualStudioVersion = 17.14.36327.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPCalculationAPI", "PPCalculationAPI.csproj", "{AD84E702-205D-1E75-8863-5B1DEA0879C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPCalculationAPI", "PPCalculationAPI\PPCalculationAPI.csproj", "{AD84E702-205D-1E75-8863-5B1DEA0879C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu.Game", "osu\osu.Game\osu.Game.csproj", "{877B934B-E00E-3ACC-A9CD-0A31EF17D166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu.Game.Rulesets.Catch", "osu\osu.Game.Rulesets.Catch\osu.Game.Rulesets.Catch.csproj", "{57EC1F4E-9B4D-21D6-0336-D44D35580669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu.Game.Rulesets.Mania", "osu\osu.Game.Rulesets.Mania\osu.Game.Rulesets.Mania.csproj", "{57A76CA7-5951-7B39-C979-A09EF60765EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu.Game.Rulesets.Osu", "osu\osu.Game.Rulesets.Osu\osu.Game.Rulesets.Osu.csproj", "{96067684-0D45-DA7F-D7F8-4DD150C0D056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu.Game.Rulesets.Taiko", "osu\osu.Game.Rulesets.Taiko\osu.Game.Rulesets.Taiko.csproj", "{05783D1C-B490-146A-5CE1-8156C4D823E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "osu", "osu", "{DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,36 @@ Global
 		{AD84E702-205D-1E75-8863-5B1DEA0879C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD84E702-205D-1E75-8863-5B1DEA0879C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD84E702-205D-1E75-8863-5B1DEA0879C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877B934B-E00E-3ACC-A9CD-0A31EF17D166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877B934B-E00E-3ACC-A9CD-0A31EF17D166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877B934B-E00E-3ACC-A9CD-0A31EF17D166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877B934B-E00E-3ACC-A9CD-0A31EF17D166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57EC1F4E-9B4D-21D6-0336-D44D35580669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57EC1F4E-9B4D-21D6-0336-D44D35580669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57EC1F4E-9B4D-21D6-0336-D44D35580669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57EC1F4E-9B4D-21D6-0336-D44D35580669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A76CA7-5951-7B39-C979-A09EF60765EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A76CA7-5951-7B39-C979-A09EF60765EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A76CA7-5951-7B39-C979-A09EF60765EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A76CA7-5951-7B39-C979-A09EF60765EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96067684-0D45-DA7F-D7F8-4DD150C0D056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96067684-0D45-DA7F-D7F8-4DD150C0D056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96067684-0D45-DA7F-D7F8-4DD150C0D056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96067684-0D45-DA7F-D7F8-4DD150C0D056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05783D1C-B490-146A-5CE1-8156C4D823E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05783D1C-B490-146A-5CE1-8156C4D823E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05783D1C-B490-146A-5CE1-8156C4D823E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05783D1C-B490-146A-5CE1-8156C4D823E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{877B934B-E00E-3ACC-A9CD-0A31EF17D166} = {DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97}
+		{57EC1F4E-9B4D-21D6-0336-D44D35580669} = {DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97}
+		{57A76CA7-5951-7B39-C979-A09EF60765EF} = {DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97}
+		{96067684-0D45-DA7F-D7F8-4DD150C0D056} = {DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97}
+		{05783D1C-B490-146A-5CE1-8156C4D823E2} = {DDB4EF12-CC4E-5E88-E6FC-71A802F4DE97}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEFE860B-ECE5-4EEC-B359-FC88FC8FEB60}
