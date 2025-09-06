@@ -2,7 +2,7 @@ namespace PPCalculationAPI.Models;
 
 public struct CalculationArgs
 {
-    public string FilePath { get; set; }
+    public string Id { get; set; }
     public int Mode { get; set; }
     public int Mods { get; set; }
     public int Combo { get; set; }

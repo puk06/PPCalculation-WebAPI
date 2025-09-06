@@ -15,7 +15,7 @@ internal static class PPCalculator
         Ruleset ruleset = RulesetUtils.GetRuleset(calculationArgs.Mode);
         Mod[] mods = ModsUtils.GetModsWithNum(ruleset, calculationArgs);
 
-        ProcessorWorkingBeatmap workingBeatmap = ProcessorWorkingBeatmap.FromFile(calculationArgs.FilePath);
+        ProcessorWorkingBeatmap workingBeatmap = ProcessorWorkingBeatmap.FromFileOrId(calculationArgs.Id);
         IBeatmap beatmap = workingBeatmap.GetPlayableBeatmap(ruleset.RulesetInfo, mods);
 
         ScoreInfo scoreInfo = new(beatmap.BeatmapInfo, ruleset.RulesetInfo)
