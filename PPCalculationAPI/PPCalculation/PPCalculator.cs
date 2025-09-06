@@ -15,12 +15,11 @@ internal static class PPCalculator
         Ruleset ruleset = RulesetUtils.GetRuleset(calculationArgs.Mode);
         Mod[] mods = ModsUtils.GetModsWithNum(ruleset, calculationArgs);
 
-        ProcessorWorkingBeatmap workingBeatmap = ProcessorWorkingBeatmap.FromFileOrId(calculationArgs.Id);
+        ProcessorWorkingBeatmap workingBeatmap = ProcessorWorkingBeatmap.FromFile(calculationArgs.FilePath);
         IBeatmap beatmap = workingBeatmap.GetPlayableBeatmap(ruleset.RulesetInfo, mods);
 
         ScoreInfo scoreInfo = new(beatmap.BeatmapInfo, ruleset.RulesetInfo)
         {
-            Accuracy = calculationArgs.Accuracy / 100,
             MaxCombo = calculationArgs.Combo,
             Statistics = HitsUtils.GenerateHitResult(calculationArgs, calculationArgs.Mode),
             Mods = mods

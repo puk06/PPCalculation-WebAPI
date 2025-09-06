@@ -2,11 +2,10 @@ namespace PPCalculationAPI.Models;
 
 public struct CalculationArgs
 {
-    public string Id { get; set; }
+    public string FilePath { get; set; }
     public int Mode { get; set; }
     public int Mods { get; set; }
     public int Combo { get; set; }
-    public double Accuracy { get; set; }
     public int HitGeki { get; set; }
     public int Hit300 { get; set; }
     public int HitKatu { get; set; }
