@@ -1,0 +1,6 @@
+@PPCalculationAPI_HostAddress = http://localhost:5000
+
+GET {{PPCalculationAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
