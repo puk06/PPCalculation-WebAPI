@@ -20,6 +20,7 @@ internal static class PPCalculator
 
         ScoreInfo scoreInfo = new(beatmap.BeatmapInfo, ruleset.RulesetInfo)
         {
+            Accuracy = calculationArgs.Accuracy,
             MaxCombo = calculationArgs.Combo,
             Statistics = HitsUtils.GenerateHitResult(calculationArgs, calculationArgs.Mode),
             Mods = mods

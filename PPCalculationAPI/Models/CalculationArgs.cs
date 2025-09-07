@@ -5,6 +5,7 @@ public struct CalculationArgs
     public string FilePath { get; set; }
     public int Mode { get; set; }
     public int Mods { get; set; }
+    public double Accuracy { get; set; }
     public int Combo { get; set; }
     public int HitGeki { get; set; }
     public int Hit300 { get; set; }
