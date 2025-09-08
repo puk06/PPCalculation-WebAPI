@@ -29,7 +29,7 @@ internal static class PPCalculator
         DifficultyCalculator difficultyCalculator = ruleset.CreateDifficultyCalculator(workingBeatmap);
         DifficultyAttributes difficultyAttributes = difficultyCalculator.Calculate(mods);
 
-        PerformanceCalculator performanceCalculator = ruleset.CreatePerformanceCalculator();
+        PerformanceCalculator performanceCalculator = ruleset.CreatePerformanceCalculator()!;
         PerformanceAttributes performanceAttributes = performanceCalculator.Calculate(scoreInfo, difficultyAttributes);
 
         return (difficultyAttributes, performanceAttributes);

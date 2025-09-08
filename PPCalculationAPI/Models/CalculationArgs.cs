@@ -1,8 +1,8 @@
 namespace PPCalculationAPI.Models;
 
-public struct CalculationArgs
+public class CalculationArgs
 {
-    public string FilePath { get; set; }
+    public string FilePath { get; set; } = string.Empty;
     public int Mode { get; set; }
     public int Mods { get; set; }
     public double Accuracy { get; set; }
