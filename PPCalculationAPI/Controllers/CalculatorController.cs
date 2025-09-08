@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PPCalculationAPI.Models;
 using PPCalculationAPI.PPCalculation;
+using System.Diagnostics;
 
 namespace PPCalculationAPI.Controllers;
 
@@ -16,20 +17,22 @@ public class CalculateController(ILogger<CalculateController> logger) : Controll
         double pp = 0.0;
         double stars = 0.0;
 
+        Stopwatch sw = Stopwatch.StartNew();
+        _logger.LogInformation("Calculation for {id} started", args.FilePath);
+
         try
         {
-            _logger.LogInformation("Calculation started at {Time}", DateTime.Now);
-
             var calculationResult = PPCalculator.Calculate(args);
             pp = calculationResult.Item2.Total;
             stars = calculationResult.Item1.StarRating;
 
-            _logger.LogInformation("Calculation finished at {Time}. PP={PP}, Stars={Stars}",
-                DateTime.Now, pp, stars);
+            sw.Stop();
+            _logger.LogInformation("Calculation finished! | Calculation took: {Time}ms", sw.ElapsedMilliseconds);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Calculation failed at {Time}", DateTime.Now);
+            sw.Stop();
+            _logger.LogError(ex, "Calculation failed... | Calculation took: {Time}ms", sw.ElapsedMilliseconds);
         }
 
         return Ok(new CalculationResponse
